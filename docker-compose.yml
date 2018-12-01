@@ -1,0 +1,14 @@
+version: '3.6'
+
+services:
+  config-server:
+    expose:
+        - 9000
+    build:
+      context: config-server
+      dockerfile: server.dockerfile 
+    networks:
+       - network1
+networks:
+  network1:
+    driver: bridge
